@@ -53,6 +53,8 @@ legacy_paths: []
 
 - 프롤로그: [일상에서 첫 추격까지](assets/opening/README.md), [시나리오](narrative/prologue.md).
 
-- 전체 이야기: [통합 스토리 v2](narrative/full-story.md). 확정 사건 사이의 새 해답은 제안 상태.
+- 전체 이야기: [통합 스토리 v3](narrative/full-story.md). 확정 사건 사이의 새 해답은 제안 상태.
 
 - 수집가 반전 정본: [Trash와 HAster](decisions/0007-white-collector.md). HAster와 황색의 왕 Hastur는 별개 인물.
+
+- 백룸 구성: [기록 밖 공간](narrative/backrooms.md).
