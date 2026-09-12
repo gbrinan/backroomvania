@@ -52,3 +52,5 @@ legacy_paths: []
 - 지역 확장·최종전: [플레이 보드](assets/playboards/README.md), [확정 서사](decisions/0005-hastur-finale.md).
 
 - 프롤로그: [일상에서 첫 추격까지](assets/opening/README.md), [시나리오](narrative/prologue.md).
+
+- 전체 이야기: [통합 스토리 v1](narrative/full-story.md). 확정 사건 사이의 새 해답은 제안 상태.
