@@ -27,4 +27,3 @@
 ![숨겨진 고양이 · 왓슨 · 진엔딩](06-true-ending.png)
 
 [구체 규칙·실패 복구](rules.md) · [확정 설정](../../decisions/0005-hastur-finale.md)
-
