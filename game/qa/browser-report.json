@@ -1,0 +1,31 @@
+{
+  "errors": [],
+  "rooms": [
+    "office",
+    "basement",
+    "escape",
+    "hub",
+    "egypt",
+    "water",
+    "greek",
+    "assyria",
+    "china",
+    "india",
+    "japan",
+    "korea",
+    "andes",
+    "aztec",
+    "collector",
+    "deduction",
+    "bridge",
+    "clock",
+    "cathedral"
+  ],
+  "opening": "real keyboard passed",
+  "ending": "checkpoint fixture plus keyboard passed",
+  "viewports": [
+    1280,
+    768,
+    375
+  ]
+}

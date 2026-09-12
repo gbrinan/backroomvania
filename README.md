@@ -25,7 +25,7 @@ legacy_paths: []
 - 확정 범위: [런던·박물관 결정](decisions/0002-demon-london-museum.md), [탑다운 결정](decisions/0001-top-down.md).
 - 현재 산출물: [기획 v0.3](concept.md), [초기 콘셉트 12장](images/README.md), [다크 판타지 시안 3장](images/dark-fantasy.md), 생성 프롬프트와 근거·실행 기록.
 - 미정: 공포·전투 비중, 플랫폼·엔진, 팀·예산·일정. 기획안의 가정과 확정 요구를 구분한다.
-- 이번 작업은 게임 코드·출시을 포함하지 않는다.
+- 실행 게임: [첫 플레이 버전](game/README.md). 브라우저에서 도입·탐험·전투·퀘스트·엔딩을 플레이한다. 장편 완성판과 정식 출시는 후속 범위다.
 
 ## Acceptance criteria
 
@@ -34,9 +34,9 @@ legacy_paths: []
 - [x] Higgsfield 연결 후 콘셉트 이미지 세트 생성.
 - [x] 이미지 최종 검토와 PR 갱신 확인.
 - [x] 여성 기록복원사와 무기 3종 선택.
-- [ ] 첫 구현 범위 합의.
+- [x] 사용자 제작 요청에 따라 첫 플레이 버전 구현.
 
-현재 검증 표면은 Markdown 기획, 생성 이미지, GitHub Draft PR이다. 게임 플레이 검증은 후속 단계다.
+현재 검증 표면은 실행 게임, Markdown 기획, 생성 이미지, GitHub Draft PR이다. 게임 검증 범위와 한계는 [검증 기록](game/qa/README.md)에 남긴다.
 
 ## Links
 
