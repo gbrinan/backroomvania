@@ -1,0 +1,26 @@
+[
+  {
+    "index": 1,
+    "job_id": "1ec15896-8025-40d9-b3f3-89c3eb7f93e1",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35dlauCY6iwRnLl0hp8vXhIHqrK/hf_20260912_095317_1ec15896-8025-40d9-b3f3-89c3eb7f93e1.png",
+    "id": "01-ordinary-night",
+    "resolution": "2k",
+    "quality": "high",
+    "aspect_ratio": "21:9"
+  },
+  {
+    "index": 2,
+    "job_id": "b684f13d-c239-4f84-b5d1-1e36e2bd815f",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35dlauCY6iwRnLl0hp8vXhIHqrK/hf_20260912_095317_b684f13d-c239-4f84-b5d1-1e36e2bd815f.png",
+    "id": "02-rhast-escape",
+    "resolution": "2k",
+    "quality": "high",
+    "aspect_ratio": "21:9"
+  }
+]
