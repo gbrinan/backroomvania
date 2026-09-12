@@ -23,7 +23,7 @@ legacy_paths: []
 ## Scope
 
 - 확정 범위: [런던·박물관 결정](decisions/0002-demon-london-museum.md), [탑다운 결정](decisions/0001-top-down.md).
-- 현재 산출물: [기획 v0.2](concept.md), [초기 콘셉트 12장](images/README.md), [다크 판타지 시안 3장](images/dark-fantasy.md), 생성 프롬프트와 근거·실행 기록.
+- 현재 산출물: [기획 v0.3](concept.md), [초기 콘셉트 12장](images/README.md), [다크 판타지 시안 3장](images/dark-fantasy.md), 생성 프롬프트와 근거·실행 기록.
 - 미정: 살인마의 최종 정체, 공포·전투 비중, 플랫폼·엔진, 팀·예산·일정. 기획안의 가정과 확정 요구를 구분한다.
 - 이번 작업은 게임 코드·출시을 포함하지 않는다.
 
@@ -48,3 +48,5 @@ legacy_paths: []
 - [Draft PR #1](https://github.com/gbrinan/backroomvania/pull/1)
 
 - 최신 산출물: [분리 자산 세트](assets/README.md), [주인공·무기 확정](decisions/0004-separated-assets.md).
+
+- 지역 확장·최종전: [플레이 보드](assets/playboards/README.md), [확정 서사](decisions/0005-hastur-finale.md).
