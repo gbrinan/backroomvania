@@ -1,0 +1,12 @@
+{"index":1,"id":"01-big-ben","title":"밤의 빅벤","prompt_file":"01-big-ben.txt","model":"gpt_image_2","resolution":"1k","quality":"medium","aspect_ratio":"16:9"}
+{"index":2,"id":"02-london-bridge","title":"런던 브릿지","prompt_file":"02-london-bridge.txt","model":"gpt_image_2","resolution":"1k","quality":"medium","aspect_ratio":"16:9"}
+{"index":3,"id":"03-museum-exterior","title":"박물관 외관","prompt_file":"03-museum-exterior.txt","model":"gpt_image_2","resolution":"1k","quality":"medium","aspect_ratio":"16:9"}
+{"index":4,"id":"04-reading-room","title":"원형 열람실 거점","prompt_file":"04-reading-room.txt","model":"gpt_image_2","resolution":"1k","quality":"medium","aspect_ratio":"16:9"}
+{"index":5,"id":"05-egypt-room","title":"이집트 심판의 방","prompt_file":"05-egypt-room.txt","model":"gpt_image_2","resolution":"1k","quality":"medium","aspect_ratio":"16:9"}
+{"index":6,"id":"06-greek-room","title":"그리스 미궁의 방","prompt_file":"06-greek-room.txt","model":"gpt_image_2","resolution":"1k","quality":"medium","aspect_ratio":"16:9"}
+{"index":7,"id":"07-assyrian-room","title":"아시리아 문지기의 방","prompt_file":"07-assyrian-room.txt","model":"gpt_image_2","resolution":"1k","quality":"medium","aspect_ratio":"16:9"}
+{"index":8,"id":"08-japanese-room","title":"일본 두루마리 연회의 방","prompt_file":"08-japanese-room.txt","model":"gpt_image_2","resolution":"1k","quality":"medium","aspect_ratio":"16:9"}
+{"index":9,"id":"09-restorer","title":"기록복원사 주인공","prompt_file":"09-restorer.txt","model":"gpt_image_2","resolution":"1k","quality":"medium","aspect_ratio":"2:3"}
+{"index":10,"id":"10-billy","title":"빌리 더 키드","prompt_file":"10-billy.txt","model":"gpt_image_2","resolution":"1k","quality":"medium","aspect_ratio":"2:3"}
+{"index":11,"id":"11-razor-killer","title":"면도날 살인마","prompt_file":"11-razor-killer.txt","model":"gpt_image_2","resolution":"1k","quality":"medium","aspect_ratio":"2:3"}
+{"index":12,"id":"12-ammit","title":"암미트 적 디자인","prompt_file":"12-ammit.txt","model":"gpt_image_2","resolution":"1k","quality":"medium","aspect_ratio":"2:3"}

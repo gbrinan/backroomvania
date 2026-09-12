@@ -15,3 +15,18 @@
 - 따뜻한 거점은 공포 뒤 안도를 만들 수 있지만 고립감을 약화할 수도 있다. 사용자의 공포 취향에 따라 조절한다.
 
 원본 문서 전체는 저장소에 복사하지 않는다. 프로젝트에 필요한 해석과 출처만 기록한다.
+
+## 2026-09-12 — 런던·박물관 확장 조사
+
+- 사용자 확정 요구: 마계화된 셜록 홈즈 시대 런던, 빌리 더 키드, 면도날 살인마, 밤의 빅벤·런던 브릿지·대영박물관, 유물과 해당 문화의 신화 적이 있는 방에서 탈출.
+- Higgsfield 설치 요청이 승인됐고 balance·models_get 호출에 성공했다. GPT Image 2의 이미지·참조 이미지 기능과 16:9·2:3 비율을 확인했다.
+- [후네페르 사자의 서](https://www.britishmuseum.org/collection/object/Y_EA9901-3): 암미트의 악어 앞부분·사자 중간·하마 뒷부분 도상을 확인. 전투 패턴과 능력 보상은 창작한다.
+- [아시리아 수호상](https://www.britishmuseum.org/visit/object-trails/collecting-and-empire-trail): 라마수는 궁전 출입구의 수호상이며 해당 조각의 1850년 입수를 확인. 본래 악신이라는 설정을 만들지 않고 게임의 왜곡된 수호자로 제안한다.
+- [슈텐도지 두루마리](https://www.britishmuseum.org/collection/object/A_1881-1210-0-270): 관련 소장품을 확인. 세부 전시 위치는 역사적 복원이라고 주장하지 않는다.
+- [런던 브릿지 연혁](https://www.cityoflondon.gov.uk/things-to-do/architecture/bridges): 중세 다리는 1831~1832년 철거되고 레니 설계 다리로 교체됐다. 이미지의 런던 브릿지는 빅토리아 시대 석조 다리로 표현한다.
+- [그레이트 코트](https://www.britishmuseum.org/sites/default/files/2020-08/R2-Collecting-the-World_LPG.pdf): 현재 유리 지붕 공간은 2000년 개장. 빅토리아 시대 이미지에 넣지 않는다.
+- [박물관 연혁](https://www.britishmuseum.org/about-us/british-museum-story/history): 원형 열람실은 1857년, 그레이트 코트는 2000년 개장. 이미지에서 두 공간을 혼동하지 않는다.
+- [미노타우로스 도기](https://www.britishmuseum.org/collection/object/G_1866-0805-2): 테세우스와 미노타우로스 장면이 있는 붉은 그림 도기를 확인. 미궁 능력·전투는 창작이다.
+- [영국 의회 기록](https://committees.parliament.uk/committee/301/speakers-advisory-committee-on-works-of-art/news/92193/january-artwork-of-the-month-the-elizabeth-tower-under-construction/): 시계탑 완공과 큰 종의 첫 타종은 1859년. 제13종은 창작이다.
+- [PBS 연표](https://www.pbs.org/wgbh/americanexperience/features/billy-life-and-legend-billy-kid/): 빌리의 마지막 사건은 1881년. 1888년 런던 등장에는 창작 시간 균열 장치가 필요하다.
+- 이미지 견적: GPT Image 2 / 1k / medium, 16:9 및 2:3 모두 1장 1크레딧. 12장 제출 성공. 최종 결과는 images/README.md와 생성 기록에서 확인한다.
