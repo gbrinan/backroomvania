@@ -58,3 +58,5 @@ legacy_paths: []
 - 수집가 반전 정본: [Trash와 HAster](decisions/0007-white-collector.md). HAster와 황색의 왕 Hastur는 별개 인물.
 
 - 백룸 구성: [기록 밖 공간](narrative/backrooms.md).
+
+- 백룸 배경: [수면 거울 이미지](assets/backrooms-water/README.md).
