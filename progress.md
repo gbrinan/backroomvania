@@ -16,3 +16,4 @@
 - 프로젝트 폴더에 독립 Git 초기화. 샌드박스와 호스트의 소유자 차이로 Git 안전 경로 검사가 실패했다. 전역 설정 대신 해당 명령 환경에서만 정확한 프로젝트 경로를 신뢰하도록 지정해 해결.
 - 빈 main 기준 커밋 9b99ae9 생성 및 원격 push 성공. PR 비교를 위한 codex/game-planning 브랜치 생성.
 - staged diff 검사에서 템플릿 끝의 빈 줄을 발견해 정리했다.
+- 기획 커밋 5b00555 원격 push 성공. Draft PR #1 생성: https://github.com/gbrinan/backroomvania/pull/1 . main 병합은 수행하지 않았다.

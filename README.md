@@ -31,7 +31,7 @@ legacy_paths: []
 - [x] 원자료의 원칙과 이번 게임의 제안을 구분한 토론 초안.
 - [x] 계획·발견·진행 파일과 후속 질문 기록.
 - [ ] 사용자가 경험 방향을 선택하고 첫 실험 범위를 합의.
-- [ ] 지정 저장소에 브랜치 push 후 PR 링크 확인.
+- [x] 지정 저장소에 브랜치 push 후 PR 링크 확인: https://github.com/gbrinan/backroomvania/pull/1
 
 검증 표면은 현재 Markdown 문서와 GitHub PR이다. 게임 플레이 검증은 아직 수행할 대상이 없다.
 
