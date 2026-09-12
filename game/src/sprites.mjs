@@ -1,41 +1,9 @@
-const woman=[
-'      hhhhhh      ',
-'     hhhhhhhh     ',
-'    hHHHHHHhhh    ',
-'    hHssssHhhh    ',
-'    hhsksskshh    ',
-'     hsssshh      ',
-'      ssss        ',
-'    rrRRRRrr      ',
-'   tttrrrtttt     ',
-'   tTTiitTTtt     ',
-'  stTTiitTTtts    ',
-'  ssTTiitTTtss    ',
-'   tTTiitTTt      ',
-'   tTTtttTTt      ',
-'   ttTtttTtt      ',
-'    ttttttt       ',
-'    tt   tt       ',
-'    bb   bb       ',
-'    bb   bb       ',
-'   bbb   bbb      '
-];
+import {human} from './humans.mjs';
 export function character(c,a,time,hero=false){
+ if(hero||a.kind==='human'||a.kind==='jack'){human(c,hero?{...a,role:'evelyn'}:a,time);return;}
  const x=Math.round(a.x),y=Math.round(a.y);c.save();c.translate(x,y);
  c.fillStyle='#02070888';c.beginPath();c.ellipse(0,5,18,7,0,0,Math.PI*2);c.fill();
- if(hero){
- if(a.invulnerable>0&&Math.floor(time*16)%2===0)c.globalAlpha=.5;
- const palette={h:'#372923',H:'#68483a',s:'#d8b09c',k:'#263435',r:'#642937',R:'#a94b52',t:'#203e40',T:'#42716d',i:'#dad4b4',b:'#43372b'};
- const bob=Math.sin(a.walk)*1.1;
- woman.forEach((row,py)=>[...row].forEach((p,px)=>{if(palette[p]){c.fillStyle=palette[p];c.fillRect(px*2-17,py*2-36+Math.round(bob),2,2);}}));
- c.fillStyle='#b05655';c.fillRect(12+Math.round(Math.sin(time*7)*2),-23,8,3);
- c.save();if(!a.armed)c.globalAlpha=0;c.rotate(a.facing);c.fillStyle=a.weapon===2?'#87c9ba':'#d7d7c5';
- if(a.weapon===0){c.fillRect(12,-2,18,3);c.fillStyle='#b18b4e';c.fillRect(11,-5,3,9);}
- if(a.weapon===1){c.fillStyle='#899592';c.fillRect(10,-3,13,5);c.fillRect(10,1,4,6);}
- if(a.weapon===2){c.fillStyle='#917353';c.fillRect(8,-2,22,3);c.fillStyle='#7fe0c5';c.fillRect(25,-5,6,8);}
- if(a.swing>0&&a.weapon===0){c.strokeStyle='#f5e7b7';c.lineWidth=4;c.beginPath();c.arc(0,0,48,-1.4,1.4);c.stroke();}
- c.restore();
- }else{
+ {
  const big=['minotaur','lamassu','hastur'].includes(a.kind),s=big?1.4:1;
  c.scale(s,s);const color=a.flash>0?'#f8ecd0':a.color??'#c4baa0';
  c.fillStyle='#17272a';c.fillRect(-13,-24,26,28);c.fillStyle=color;c.fillRect(-10,-29,20,22);c.fillRect(-13,-13,26,17);

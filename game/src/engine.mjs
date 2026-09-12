@@ -32,7 +32,7 @@ export class Game{
  p.invulnerable=Math.max(0,p.invulnerable-dt);p.attackCooldown=Math.max(0,p.attackCooldown-dt);p.dashCooldown=Math.max(0,p.dashCooldown-dt);p.dashTime=Math.max(0,p.dashTime-dt);p.swing=Math.max(0,p.swing-dt);this.shake=Math.max(0,this.shake-dt);
  let dx=(input.has('KeyD')||input.has('ArrowRight')?1:0)-(input.has('KeyA')||input.has('ArrowLeft')?1:0);
  let dy=(input.has('KeyS')||input.has('ArrowDown')?1:0)-(input.has('KeyW')||input.has('ArrowUp')?1:0);
- const length=Math.hypot(dx,dy);if(length){dx/=length;dy/=length;p.facing=Math.atan2(dy,dx);p.walk+=dt*10;}
+ const length=Math.hypot(dx,dy);p.moving=length>0||p.dashTime>0;if(length){dx/=length;dy/=length;p.facing=Math.atan2(dy,dx);p.walk+=dt*10;}
  if(p.dashTime>0){dx=Math.cos(p.facing);dy=Math.sin(p.facing);}
  this.move(p,dx*(p.dashTime>0?440:155)*dt,dy*(p.dashTime>0?440:155)*dt);
  if(input.has('KeyJ'))attack(this);

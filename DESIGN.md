@@ -26,3 +26,6 @@ First playable prototype, not the finished multi-hour game. Compact rooms, origi
 
 ## 9. Traversal and optional quest
 User explicitly requests avoiding ordinary enemies while moving between stages and simple quests. Ordinary mobs patrol until within 220px, then chase; doors never require room clearance. Only a marked guardian locks its relic. Quest pickups require no combat. Billy asks for three transport records in Egypt, flooded Backrooms and China; turn-in improves revolver reload. Relic-enabled return shortcuts make the visited museum a connected loop. Quest status appears in the objective bar and journal.
+
+## 10. Human-readable sprites
+User asks unmistakably human 2D sprites. Replace 40px block characters with approximately 64px adult-proportion figures: head/neck, sloped shoulders, shaped torso/waist, independently articulated arms/hands and two separated legs/boots. About five heads tall. Clear skin highlights and face, dark outline, directional front/back/profile and alternating walk limbs. Evelyn keeps brown bob, teal coat, ivory blouse and burgundy scarf. Human NPCs have distinct hats/costumes; Jack is a masked human, not a square monster. Feet and collision radius remain anchored to existing world coordinates.
