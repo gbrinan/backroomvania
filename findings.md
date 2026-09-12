@@ -30,3 +30,9 @@
 - [영국 의회 기록](https://committees.parliament.uk/committee/301/speakers-advisory-committee-on-works-of-art/news/92193/january-artwork-of-the-month-the-elizabeth-tower-under-construction/): 시계탑 완공과 큰 종의 첫 타종은 1859년. 제13종은 창작이다.
 - [PBS 연표](https://www.pbs.org/wgbh/americanexperience/features/billy-life-and-legend-billy-kid/): 빌리의 마지막 사건은 1881년. 1888년 런던 등장에는 창작 시간 균열 장치가 필요하다.
 - 이미지 견적: GPT Image 2 / 1k / medium, 16:9 및 2:3 모두 1장 1크레딧. 12장 제출 성공. 최종 결과는 images/README.md와 생성 기록에서 확인한다.
+
+## 분리 자산 제작
+
+- 사용자 확정: 여성 기록복원사, 검·리볼버·유물 지팡이. 결정 정본: decisions/0004-separated-assets.md.
+- Higgsfield models_get에서 gpt_image_2의 image 참조 입력, 2k, medium/high 지원 확인. 기존 작업 ID로 외형과 환경을 참조한다.
+- 반대 관점: 무기마다 전신 애니메이션을 늘리면 방향×동작×무기만큼 수정 비용이 커진다. 첫 세트에서 실루엣을 검증한 후 몸·무기 레이어 분리 여부를 결정한다.

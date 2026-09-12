@@ -24,8 +24,8 @@ legacy_paths: []
 
 - 확정 범위: [런던·박물관 결정](decisions/0002-demon-london-museum.md), [탑다운 결정](decisions/0001-top-down.md).
 - 현재 산출물: [기획 v0.2](concept.md), [초기 콘셉트 12장](images/README.md), [다크 판타지 시안 3장](images/dark-fantasy.md), 생성 프롬프트와 근거·실행 기록.
-- 미정: 주인공, 살인마의 최종 정체, 공포·전투 비중, 플랫폼·엔진, 팀·예산·일정. 기획안의 가정과 확정 요구를 구분한다.
-- 이번 작업은 게임 코드·출시·애니메이션 시트 제작을 포함하지 않는다.
+- 미정: 살인마의 최종 정체, 공포·전투 비중, 플랫폼·엔진, 팀·예산·일정. 기획안의 가정과 확정 요구를 구분한다.
+- 이번 작업은 게임 코드·출시을 포함하지 않는다.
 
 ## Acceptance criteria
 
@@ -33,7 +33,8 @@ legacy_paths: []
 - [x] 유물 근거와 창작 규칙을 구분하고 첫 플레이 실험 범위를 제안.
 - [x] Higgsfield 연결 후 콘셉트 이미지 세트 생성.
 - [x] 이미지 최종 검토와 PR 갱신 확인.
-- [ ] 사용자가 주인공과 첫 구현 범위를 선택.
+- [x] 여성 기록복원사와 무기 3종 선택.
+- [ ] 첫 구현 범위 합의.
 
 현재 검증 표면은 Markdown 기획, 생성 이미지, GitHub Draft PR이다. 게임 플레이 검증은 후속 단계다.
 
@@ -45,3 +46,5 @@ legacy_paths: []
 - 출처: [findings.md](findings.md)
 - 실행·검증: [progress.md](progress.md)
 - [Draft PR #1](https://github.com/gbrinan/backroomvania/pull/1)
+
+- 최신 산출물: [분리 자산 세트](assets/README.md), [주인공·무기 확정](decisions/0004-separated-assets.md).
