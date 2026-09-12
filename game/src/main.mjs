@@ -50,7 +50,7 @@ for(const b of document.querySelectorAll('[data-key]')){
 }
 let last=performance.now(),uiTime=0;
 function frame(now){const dt=(now-last)/1000;last=now;g.update(dt,keys);render(ctx,g,reduced);uiTime+=dt;
- if(uiTime>.1){uiTime=0;$('room-name').textContent=g.room.name;$('chapter').textContent=g.room.chapter;$('objective').textContent=g.room.desc+(g.flags.questActive&&!g.flags.questDone?' · 빌리의 기록 '+['scrapA','scrapB','scrapC'].filter(k=>g.flags[k]).length+'/3':'');$('health').value=g.player.hp;$('dash').value=1-g.player.dashCooldown/1.2;$('relic-count').textContent=`${g.flags.relics.length} / 6`;
+ if(uiTime>.1){uiTime=0;sound.music.setScene(g.room.id);$('room-name').textContent=g.room.name;$('chapter').textContent=g.room.chapter;$('objective').textContent=g.room.desc+(g.flags.questActive&&!g.flags.questDone?' · 빌리의 기록 '+['scrapA','scrapB','scrapC'].filter(k=>g.flags[k]).length+'/3':'');$('health').value=g.player.hp;$('dash').value=1-g.player.dashCooldown/1.2;$('relic-count').textContent=`${g.flags.relics.length} / 6`;
  for(const b of document.querySelectorAll('[data-weapon]')){b.disabled=!g.flags.armed;b.classList.toggle('selected',Number(b.dataset.weapon)===g.player.weapon);b.setAttribute('aria-pressed',String(Number(b.dataset.weapon)===g.player.weapon));}
  document.querySelector('[data-weapon="0"] span').textContent=g.flags.relics.includes('knife')?'심장적출검':'검';}
  requestAnimationFrame(frame);

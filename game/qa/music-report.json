@@ -1,0 +1,13 @@
+{
+  "exploration32s": true,
+  "muteStopsSource": true,
+  "pursuit": {
+    "durations": [
+      21.333333333333332
+    ],
+    "states": [
+      "running"
+    ]
+  },
+  "errors": []
+}
