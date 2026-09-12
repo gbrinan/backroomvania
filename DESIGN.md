@@ -29,3 +29,6 @@ User explicitly requests avoiding ordinary enemies while moving between stages a
 
 ## 10. Human-readable sprites
 User asks unmistakably human 2D sprites. Replace 40px block characters with approximately 64px adult-proportion figures: head/neck, sloped shoulders, shaped torso/waist, independently articulated arms/hands and two separated legs/boots. About five heads tall. Clear skin highlights and face, dark outline, directional front/back/profile and alternating walk limbs. Evelyn keeps brown bob, teal coat, ivory blouse and burgundy scarf. Human NPCs have distinct hats/costumes; Jack is a masked human, not a square monster. Feet and collision radius remain anchored to existing world coordinates.
+
+## 11. Evelyn facial readability
+Evelyn gets an exclusive slightly larger oval face, visible forehead/cheeks, distinct brows and eyes with one-pixel lashes, restrained rose lips, and curved asymmetrical bob framing. Preserve brown hair/teal coat/scarf and mature adventurer identity. Front and profile must read at actual size, not only a zoomed study. NPC faces and gameplay geometry unchanged.
