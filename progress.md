@@ -17,3 +17,9 @@
 - 빈 main 기준 커밋 9b99ae9 생성 및 원격 push 성공. PR 비교를 위한 codex/game-planning 브랜치 생성.
 - staged diff 검사에서 템플릿 끝의 빈 줄을 발견해 정리했다.
 - 기획 커밋 5b00555 원격 push 성공. Draft PR #1 생성: https://github.com/gbrinan/backroomvania/pull/1 . main 병합은 수행하지 않았다.
+
+## 2026-09-12 — 시점 결정
+
+- 사용자의 성검전설 3식 탑다운 선택을 decisions/0001-top-down.md에 기록.
+- README와 콘셉트의 횡스크롤 제안을 교체하고 평면 탐험·방향별 스프라이트·벽 가림 검토 사항을 추가했다. 세부 이동·전투 규칙은 제안으로 유지했다.
+- 문서 재독과 링크 대상 확인, 오래된 시점 미정 문구 검색을 수행했다. 게임 코드 변경과 플레이 검증은 없다.

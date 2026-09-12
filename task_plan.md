@@ -4,15 +4,15 @@
 
 | 단계 | 상태 | 종료 조건 |
 | --- | --- | --- |
-| 자료·작업공간 확인 | completed | 공유 문서, 계획 방식, 규칙 확인 |
-| 기획 토론 초안 작성 | completed | 확정 요구와 가설을 구분 |
-| 문서 검증 | completed | 재독, 링크 대상과 요구 포함 확인 |
-| Git remote·push·PR | completed | Draft PR #1 생성 확인 |
+| 자료 확인·초안·PR 생성 | completed | Draft PR #1 확인 |
+| 탑다운 선택 반영 | completed | 콘셉트·결정 기록 반영 및 문서 검사 |
 
 ## 다음 행동
 
-Draft PR: https://github.com/gbrinan/backroomvania/pull/1 . 사용자의 시점 선택을 받아 기획을 갱신한다. 다음 대화에서 주인공·공포 강도·전투 역할을 정한다.
+성검전설 3식 탑다운 선택을 기록하고, 공포·모험·전투의 비중을 사용자와 논의한다.
 
 ## 미해결
 
-시점 선택 질문 중. 횡스크롤은 토론용 후보이며 구현 결정이 아니다.
+주인공, 전투 역할, 공포 강도, 플랫폼, 제작 여건과 첫 실험 범위.
+
+Draft PR: https://github.com/gbrinan/backroomvania/pull/1
