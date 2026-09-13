@@ -1,0 +1,12 @@
+import {mkdir,copyFile,cp,readdir} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import {resolve} from 'node:path';
+const root=fileURLToPath(new URL('../',import.meta.url));
+const out=resolve(root,'dist');
+await mkdir(resolve(out,'game/music'),{recursive:true});
+await mkdir(resolve(out,'assets/backrooms-water/qa'),{recursive:true});
+for(const name of ['index.html','style.css']) await copyFile(resolve(root,'game',name),resolve(out,'game',name));
+await cp(resolve(root,'game/src'),resolve(out,'game/src'),{recursive:true});
+for(const name of await readdir(resolve(root,'game/music'))) if(name.endsWith('.wav')) await copyFile(resolve(root,'game/music',name),resolve(out,'game/music',name));
+await copyFile(resolve(root,'assets/backrooms-water/qa/01-drowned-corridor.jpg'),resolve(out,'assets/backrooms-water/qa/01-drowned-corridor.jpg'));
+console.log('Static game built in dist/');

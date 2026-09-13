@@ -61,3 +61,8 @@ node --test game/qa/game.test.mjs
 ## 인간형 캐릭터 그래픽
 
 에블린과 인간 NPC·잭은 얼굴·목·팔다리가 구분되는 약64px 인간형 스프라이트를 사용한다. 전후좌우 방향과 보행을 반영하며 발 기준 충돌 위치는 유지한다. [캐릭터 미리보기](qa/humans-preview.html)에서 방향·무기·복장 차이를 볼 수 있다.
+
+## 공개 플레이
+https://backroomvania.vercel.app/game/
+
+Vercel 정적 배포: 저장소 루트에서 `node game/build.mjs`, `vercel --prod` 실행. `vercel.json`은 `dist`만 공개한다. 로컬과 공개 사이트의 저장 기록은 브라우저 origin별로 분리된다.

@@ -1,0 +1,14 @@
+*
+!vercel.json
+!game
+!game/build.mjs
+!game/index.html
+!game/style.css
+!game/src
+!game/src/**
+!game/music
+!game/music/*.wav
+!assets
+!assets/backrooms-water
+!assets/backrooms-water/qa
+!assets/backrooms-water/qa/01-drowned-corridor.jpg

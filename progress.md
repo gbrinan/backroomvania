@@ -143,3 +143,10 @@
 - 실제 브라우저4방향 이동·3무기 입력 후 오류0. 확대 얼굴/실제 게임/375px 캡처 및19개 방 갱신. 새로운 로직 변경이 없어 별도 게임 단위 테스트 추가 없이 렌더 표면 검증에 집중.
 - 얼굴 미리보기: game/qa/evelyn-face-preview.png. 전체 인물: game/qa/humans-lineup.png.
 - 독립 시각/무결성 검토 모두 PASS. 얼굴 잘림·무기 겹침 없음, 에블린 전용 조건 확인. 375px에서는 얼굴 세부 표정보다 단발·얼굴색·목도리로 식별되는 한계가 있음.
+
+## Vercel production deployment
+- Live: https://backroomvania.vercel.app/game/ (2026-09-13). Project backroomvania, authenticated existing scope. GitHub repository connected by Vercel CLI.
+- Build copies only runtime HTML/CSS/modules, two music WAVs and title background into dist. Root redirects to /game/; documentation and QA are not published.
+- First CLI attempt needed explicit team scope; resolved using existing account project scope. First browser probe hit opening modal when clicking audio; fixed probe to dismiss dialogue through its button, without changing game code.
+- Public Edge browser: start, dismiss opening dialogue, movement input, sound enabled; page errors 0. Module/music/background 200; README and QA paths 404. Evidence: game/qa/vercel-report.json and vercel-game.png.
+- Browser saves belong to the deployment origin; localhost progress does not transfer automatically.

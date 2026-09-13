@@ -1,0 +1,14 @@
+{
+  "url": "https://backroomvania.vercel.app/game/",
+  "status": 200,
+  "errors": [],
+  "checks": {
+    "/game/src/main.mjs": 200,
+    "/game/music/the-unwritten-archive.wav": 200,
+    "/assets/backrooms-water/qa/01-drowned-corridor.jpg": 200,
+    "/README.md": 404,
+    "/game/qa/humans-report.json": 404
+  },
+  "sound": "true",
+  "date": "2026-09-13T01:33:58.116Z"
+}
