@@ -76,3 +76,8 @@
 - Three generated PNGs inspected: 2×2 material quadrants align without gutters; museum wall is an elevation, not a collision layout; Evelyn portrait preserves brown bob/teal coat/burgundy scarf.
 - Architectural elevation is repeated only above walkable bounds. Generated floors are cached as decorative surfaces; gameplay objects remain independent. Room identity is supplemented by procedural cultural cornices and display cases.
 - Tradeoff: texture detail improves material richness but does not replace the provisional playable human sprite with a production animation atlas. Current readable directional human sprite remains intact.
+
+## 50분 플레이 방향 검토
+- 최신 사용자 요구는 퍼즐보다 쉬운 조작·점진적 확장이다. 기존 concept의 순서 퍼즐·수치 저울, full-story의 3지역 필수 잠금 왕복은 충돌하여 축소했다.
+- 현 배포본의 세 무기 동시 지급·먹 망령 무기 면역·객관식 추리와 신규 기획을 구분했다. 19개 방의 존재만으로 50분을 보장하지 않으며 연결 장면·관찰 테스트가 필요하다.
+- 검증 전 목표: 일반 엔딩 약50분, 선택 탐험 추가3~7분. 반대 관점과 조정 기준은 design/50-minute-adventure.md 정본에 기록했다.

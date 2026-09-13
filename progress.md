@@ -158,3 +158,10 @@
 - Production deployment https://backroomvania.vercel.app/game/ updated. Public browser verification errors0, materials200, provenance404; portrait loaded and sound enabled; frame sample mean16.39ms. Lighthouse package unavailable; no Lighthouse score claimed.
 - Integrity reviewer PASS: runtime layering, unchanged collision/input, portrait mobile layout and build inclusion confirmed. Reviewer inspected artifacts/source, not a separate playthrough. Common material grammar across regions remains a visual limitation.
 - Independent visual reviewer PASS, 24 PNGs directly inspected (19 rooms,3 portrait widths,opening,mobile play), no clipping/CJK blockers. Small fixed-ratio mobile characters remain an existing limitation. Integrity and visual reviews bind to current uncommitted graphics source used in deployment rfpu5ivdk; not claimed as whole-game final PR review.
+
+## 50분 호러 어드벤처 기획 반영
+- design/50-minute-adventure.md 작성: 11구간 시간표, 초반6분 행동 학습,4가지 기본 행동,유물 패시브 확장,선택 무기,짧은 개그,난이도·재시작·플레이테스트 기준.
+- 결정0009와 README/concept/full-story/task_plan 연결. 기존 순서 퍼즐과 강제 재방문 제안을 축소하고 홈즈의 머리 승부를 관찰형 행동으로 각색. 서사의 핵심 조건 유지.
+- 첫 긴 문서 쓰기가 도구 명령 길이 한도로 마지막 문장에서 잘림. 끝부분을 복구하고 결정 파일은 분리 작성함.
+- 기획만 변경했으며 실행 게임·Vercel 배포는 변경하지 않음. 50분은 측정 완료 주장이 아님.
+- 문서 검증: 본편11구간 합계50분, 수정 문서 상대 링크 존재, 문서 끝부분 정상, diff whitespace 오류 없음. 능력 획득→첫 사용 순서와6유물/HAster 구분/3승부/진엔딩 조건 대조 완료. 재미·시간은 향후 실제 첫 플레이 관찰 필요.

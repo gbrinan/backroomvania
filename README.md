@@ -23,8 +23,8 @@ legacy_paths: []
 ## Scope
 
 - 확정 범위: [런던·박물관 결정](decisions/0002-demon-london-museum.md), [탑다운 결정](decisions/0001-top-down.md).
-- 현재 산출물: [기획 v0.3](concept.md), [초기 콘셉트 12장](images/README.md), [다크 판타지 시안 3장](images/dark-fantasy.md), 생성 프롬프트와 근거·실행 기록.
-- 미정: 공포·전투 비중, 플랫폼·엔진, 팀·예산·일정. 기획안의 가정과 확정 요구를 구분한다.
+- 현재 산출물: [기획 v0.4](concept.md), [초기 콘셉트 12장](images/README.md), [다크 판타지 시안 3장](images/dark-fantasy.md), 생성 프롬프트와 근거·실행 기록.
+- 미정: 세부 난이도, 정식 제작 도구·플랫폼, 팀·예산·일정. 기획안의 가정과 확정 요구를 구분한다.
 - 실행 게임: [첫 플레이 버전](game/README.md). 브라우저에서 도입·탐험·전투·퀘스트·엔딩을 플레이한다. 장편 완성판과 정식 출시는 후속 범위다.
 
 ## Acceptance criteria
@@ -60,3 +60,5 @@ legacy_paths: []
 - 백룸 구성: [기록 밖 공간](narrative/backrooms.md).
 
 - 백룸 배경: [수면 거울 이미지](assets/backrooms-water/README.md).
+
+- 다음 제작 목표: [약 50분 호러 어드벤처](design/50-minute-adventure.md). 쉬운 조작·초반 학습·점진적 확장·가벼운 유머를 반영한 기획이며 현재 배포본의 실측 분량은 아니다.
