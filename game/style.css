@@ -5,3 +5,13 @@
 @media(max-width:500px){#weapons{flex-basis:100%;width:100%}#weapons button{flex:1;white-space:nowrap;font-size:11px}#weapons span{margin-left:4px}#journal-button{width:100%}#dialog-body{word-break:keep-all;overflow-wrap:break-word}}
 @media(max-width:800px){#stage:has(#title-screen:not([hidden])){min-height:360px}}
 #dialog-body{word-break:keep-all;overflow-wrap:break-word}
+
+/* Evelyn's record portrait and brass archive frame. */
+.dialog-portrait{display:none;object-fit:cover;object-position:50% 20%;border:1px solid var(--gold);image-rendering:pixelated;background:var(--ink)}
+.with-portrait .dialog-portrait{display:block;float:left;width:140px;height:184px;margin:0 24px 16px 0}
+dialog #choices{clear:both}dialog{border-top:3px solid var(--gold);background:linear-gradient(120deg,#1c2a29fa,#0b1619fa);word-break:keep-all}
+#stage{border:5px solid #272d29;outline:1px solid #89734d;outline-offset:3px}
+#game-bar{background:linear-gradient(90deg,#17221c88,transparent);padding-left:12px;padding-right:12px}
+@media(max-width:600px){.with-portrait .dialog-portrait{width:72px;height:96px;margin:0 12px 8px 0}#stage{border-width:2px;outline-offset:1px}}
+.with-portrait #dialog-body{margin-left:164px}
+@media(max-width:600px){.with-portrait #dialog-body{clear:both;margin-left:0;padding-top:8px}}

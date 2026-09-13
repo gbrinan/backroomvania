@@ -71,3 +71,8 @@
 - 저장소에는 실행 코드가 없으며 생성 스프라이트는 교정 전 원화다. 첫 버전은 독자 픽셀 스프라이트를 코드로 그리고 기존 배경 이미지는 타이틀에 사용한다.
 - 브라우저 Canvas + ES modules + Node 내장 정적 서버로 외부 의존성 없이 실행한다. 장편 시나리오 정본은 보존하고 전체 게임 루프를 압축한 프로토타입으로 명시한다.
 - 대안: 원화를 즉시 타일맵으로 쓰면 통행로와 반사 그림의 경계를 믿을 수 없어 현재 단계에서는 읽을 수 있는 타일 지형을 우선한다.
+
+## Higgsfield runtime art pass (2026-09-13)
+- Three generated PNGs inspected: 2×2 material quadrants align without gutters; museum wall is an elevation, not a collision layout; Evelyn portrait preserves brown bob/teal coat/burgundy scarf.
+- Architectural elevation is repeated only above walkable bounds. Generated floors are cached as decorative surfaces; gameplay objects remain independent. Room identity is supplemented by procedural cultural cornices and display cases.
+- Tradeoff: texture detail improves material richness but does not replace the provisional playable human sprite with a production animation atlas. Current readable directional human sprite remains intact.

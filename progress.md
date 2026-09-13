@@ -150,3 +150,11 @@
 - First CLI attempt needed explicit team scope; resolved using existing account project scope. First browser probe hit opening modal when clicking audio; fixed probe to dismiss dialogue through its button, without changing game code.
 - Public Edge browser: start, dismiss opening dialogue, movement input, sound enabled; page errors 0. Module/music/background 200; README and QA paths 404. Evidence: game/qa/vercel-report.json and vercel-game.png.
 - Browser saves belong to the deployment origin; localhost progress does not transfer automatically.
+
+## Higgsfield graphics integration (2026-09-13)
+- Generated and inspected materials.png, museum-wall.png, evelyn-portrait.png through Higgsfield MCP gpt_image_2. Original PNG assets embedded in game; provenance in game/art/provenance.json.
+- Four cached floor materials across 19 rooms, museum upper walls, carved regional cornices, glass exhibit cases, portrait dialogue, distinct creature silhouettes. Moved HP bars above new taller creatures so faces remain clear.
+- Validation: 14 game tests PASS; actual keyboard movement, 3 weapon inputs, sound toggle, portrait at 1280/768/375px, all 19 rooms captured. Browser errors 0; observed mean frame interval 16.62ms on desktop. This is frame sampling, not a Lighthouse audit or low-end mobile performance guarantee.
+- Production deployment https://backroomvania.vercel.app/game/ updated. Public browser verification errors0, materials200, provenance404; portrait loaded and sound enabled; frame sample mean16.39ms. Lighthouse package unavailable; no Lighthouse score claimed.
+- Integrity reviewer PASS: runtime layering, unchanged collision/input, portrait mobile layout and build inclusion confirmed. Reviewer inspected artifacts/source, not a separate playthrough. Common material grammar across regions remains a visual limitation.
+- Independent visual reviewer PASS, 24 PNGs directly inspected (19 rooms,3 portrait widths,opening,mobile play), no clipping/CJK blockers. Small fixed-ratio mobile characters remain an existing limitation. Integrity and visual reviews bind to current uncommitted graphics source used in deployment rfpu5ivdk; not claimed as whole-game final PR review.

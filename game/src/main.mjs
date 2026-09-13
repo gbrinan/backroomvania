@@ -9,6 +9,7 @@ const saveKey='backroomvania-v1';let g;let toastTimer;let stored=null;
 try{stored=parseSave(localStorage.getItem(saveKey));}catch{$('save-status').textContent='이 브라우저에서는 자동 저장을 사용할 수 없습니다.';}
 function toast(text){$('toast').textContent=text;$('toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('visible'),3600);}
 function show(speaker,title,body,choices){
+ dialog.classList.toggle('with-portrait',speaker.includes('에블린'));
  keys.clear();const previous=g.mode;g.mode='dialog';$('speaker').textContent=speaker;$('dialog-title').textContent=title;$('dialog-body').textContent=body;$('choices').replaceChildren();
  choices.forEach(([text,action])=>{const b=document.createElement('button');b.textContent=text;b.addEventListener('click',()=>{dialog.close();g.mode=previous==='dialog'?'play':previous;canvas.focus();action();});$('choices').append(b);});
  if(!dialog.open)dialog.showModal();$('choices').firstElementChild?.focus();

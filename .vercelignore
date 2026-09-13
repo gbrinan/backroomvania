@@ -12,3 +12,5 @@
 !assets/backrooms-water
 !assets/backrooms-water/qa
 !assets/backrooms-water/qa/01-drowned-corridor.jpg
+!game/art
+!game/art/*.png

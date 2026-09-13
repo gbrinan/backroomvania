@@ -6,6 +6,8 @@ const out=resolve(root,'dist');
 await mkdir(resolve(out,'game/music'),{recursive:true});
 await mkdir(resolve(out,'assets/backrooms-water/qa'),{recursive:true});
 for(const name of ['index.html','style.css']) await copyFile(resolve(root,'game',name),resolve(out,'game',name));
+await mkdir(resolve(out,'game/art'),{recursive:true});
+for(const name of await readdir(resolve(root,'game/art'))) if(name.endsWith('.png')) await copyFile(resolve(root,'game/art',name),resolve(out,'game/art',name));
 await cp(resolve(root,'game/src'),resolve(out,'game/src'),{recursive:true});
 for(const name of await readdir(resolve(root,'game/music'))) if(name.endsWith('.wav')) await copyFile(resolve(root,'game/music',name),resolve(out,'game/music',name));
 await copyFile(resolve(root,'assets/backrooms-water/qa/01-drowned-corridor.jpg'),resolve(out,'assets/backrooms-water/qa/01-drowned-corridor.jpg'));

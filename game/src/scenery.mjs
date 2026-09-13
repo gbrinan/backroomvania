@@ -1,3 +1,4 @@
+import {paintedFloor,architecture,propDetail} from './art.mjs';
 const palettes={office:['#37382e','#454337','#645944'],store:['#27342f','#35413a','#53624f'],hub:['#31423e','#3b4b42','#736f52'],egypt:['#554833','#62513a','#a08b5e'],greek:['#3a4647','#485355','#8b9790'],assyria:['#394447','#455156','#8c9291'],china:['#3d3433','#4a3d37','#8e6251'],india:['#35403a','#424c3d','#898666'],japan:['#303d3d','#3c4948','#87948a'],korea:['#354544','#435452','#8aa69b'],andes:['#40413a','#4f5046','#929178'],aztec:['#3e3531','#4d4038','#927152'],backroom:['#4d4b32','#5a5439','#938356'],water:['#203938','#294341','#668a80'],bridge:['#2c393c','#35474a','#6b8385'],clock:['#373930','#45483a','#a29463'],cathedral:['#363b36','#41483f','#848b70']};
 export function roomBackdrop(c,room,time,reduced){
  const p=palettes[room.theme]??palettes.store;c.fillStyle='#071113';c.fillRect(0,0,960,640);
@@ -7,6 +8,7 @@ export function roomBackdrop(c,room,time,reduced){
  c.fillStyle='#bcb99a0c';c.fillRect(x+2,y+2,27,1);c.fillStyle='#060d122a';c.fillRect(x,y+30,32,2);
  if(hash<4){c.fillStyle='#a2a18a18';c.fillRect(x+9,y+12,2,1);c.fillRect(x+21,y+23,5,1);}
  }
+ paintedFloor(c,room.theme);
  if(['hub','office','cathedral'].includes(room.theme)){
   c.fillStyle=room.theme==='office'?'#603a37':'#294c48';c.fillRect(382,112,196,466);
   c.strokeStyle='#b6a77766';c.lineWidth=2;c.strokeRect(390,120,180,450);
@@ -22,11 +24,13 @@ export function roomBackdrop(c,room,time,reduced){
   if(['backroom','water','store'].includes(room.theme))mirror(c,x,86,time);
   else{c.fillStyle='#1a2b2c';c.fillRect(x-19,49,38,38);c.fillStyle=p[2];c.fillRect(x-22,46,44,5);c.fillRect(x-22,83,44,5);c.fillStyle='#b6ad7750';c.fillRect(x-2,51,3,31);}
  }
+ architecture(c,room,p);
  for(const [x,y,w,h] of room.blocks){
  c.fillStyle='#00000060';c.fillRect(x+9,y+10,w,h);c.fillStyle=p[0];c.fillRect(x,y,w,h);c.fillStyle=p[2];c.fillRect(x,y-13,w,13);c.fillStyle=p[1];c.fillRect(x+3,y,w-6,h-4);c.fillStyle='#c6c9ac30';c.fillRect(x+3,y-12,w-6,2);
  if(['office','store','hub','backroom'].includes(room.theme)){for(let yy=y+4;yy<y+h-8;yy+=24){for(let xx=x+5;xx<x+w-5;xx+=9){c.fillStyle=['#666b51','#855744','#476862','#9b8252'][(xx+yy)%4];c.fillRect(xx,yy,6,16);}c.fillStyle='#a0906660';c.fillRect(x+3,yy+17,w-6,3);}}
  else {c.strokeStyle='#c9c49b44';c.strokeRect(x+9,y+10,w-18,h-20);for(let yy=y+18;yy<y+h-10;yy+=16){c.fillStyle='#c1bc8f40';c.fillRect(x+w/2-6,yy,12,3);}}
  }
+ propDetail(c,room,p);
  for(const x of [72,888])for(const y of [140,550])lamp(c,x,y);
 }
 function water(c,[x,y,w,h],time,reduced){

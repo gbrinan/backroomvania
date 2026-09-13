@@ -15,11 +15,11 @@ export function render(c,g,reduced=false){
   if(o.type==='door'||o.type==='relic'||['lupin','puzzle','director','billy'].includes(o.id))label(c,o.label,o.x,o.y+34,'#c9ccba',11);
  }
  for(const e of g.enemies){
- if(e.guardian)label(c,'◆ 유물 수호자',e.x,e.y-58,'#e2bc73',10);
+ if(e.guardian)label(c,'◆ 유물 수호자',e.x,e.y-94,'#e2bc73',10);
  if(e.windup>0){c.fillStyle='#b349433f';c.strokeStyle='#ffae82';c.lineWidth=2;c.beginPath();c.arc(e.target.x,e.target.y,e.kind==='hastur'?85:62,0,Math.PI*2);c.fill();c.stroke();}
  }
  const actors=[...g.enemies.map(a=>({a,hero:false})),{a:{...g.player,armed:g.flags.armed},hero:true}].sort((a,b)=>a.a.y-b.a.y);
- for(const {a,hero} of actors){character(c,a.kind==='jack'?{...a,moving:a.stun<=0&&a.windup<=0,facing:Math.atan2(g.player.y-a.y,g.player.x-a.x)}:a,g.time,hero);if(!hero&&Number.isFinite(a.hp)){c.fillStyle='#121c20';c.fillRect(a.x-20,a.y-49,40,4);c.fillStyle='#c08474';c.fillRect(a.x-20,a.y-49,40*Math.max(0,a.hp/a.maxHp),4);}}
+ for(const {a,hero} of actors){character(c,a.kind==='jack'?{...a,moving:a.stun<=0&&a.windup<=0,facing:Math.atan2(g.player.y-a.y,g.player.x-a.x)}:a,g.time,hero);if(!hero&&Number.isFinite(a.hp)){c.fillStyle='#121c20';c.fillRect(a.x-20,a.y-80,40,4);c.fillStyle='#c08474';c.fillRect(a.x-20,a.y-80,40*Math.max(0,a.hp/a.maxHp),4);}}
  for(const s of g.shots){c.fillStyle=s.enemy?'#dfbd64':s.weapon===2?'#8af4c9':'#fff1c5';c.shadowColor=c.fillStyle;c.shadowBlur=8;c.beginPath();c.arc(s.x,s.y,s.weapon===2?6:3,0,Math.PI*2);c.fill();c.shadowBlur=0;}
  for(const e of g.effects){c.globalAlpha=Math.min(1,e.life*3);c.strokeStyle=e.color;c.lineWidth=3;c.beginPath();c.arc(e.x,e.y,e.r*(1-e.life),0,Math.PI*2);c.stroke();}c.globalAlpha=1;
  for(const p of g.particles)label(c,p.text,p.x,p.y,p.color,16);
