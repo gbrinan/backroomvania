@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-13T02:40:24.861Z",
+  "url": "https://backroomvania.vercel.app/game/",
+  "errors": [],
+  "viewports": [
+    1280,
+    768,
+    375
+  ],
+  "meanFrameMs": 16.38666666686534,
+  "portraitLoaded": true,
+  "sound": "true"
+}

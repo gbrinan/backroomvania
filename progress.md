@@ -1,0 +1,160 @@
+# Progress
+
+## 2026-09-12 — 기획 시작
+
+- 작업공간 및 도메인 규칙, 프로젝트 생성 스크립트 확인.
+- GitHub 계획 문서와 Google Docs 본문 조회. 원자료 예시와 사용자 요구를 구분.
+- 공식 마나 소개에서 작품 명칭 구분 확인.
+- 표준 생성 스크립트로 프로젝트 폴더 생성. README, AGENTS, task_plan, findings, concept 작성.
+- 실패: apply_patch의 같은 경로 삭제·추가 조합이 검증 단계에서 거절되어 변경되지 않았다. Git Bash로 직접 문서를 작성하는 방법으로 전환.
+- Git 조사: 작업공간 루트는 사용자 홈 Git을 참조하고 remote가 없다. 별도 게임 저장소는 이번 대상으로 확인되지 않았다. 저장소 URL을 사용자에게 질문했다.
+- 사용자에게 시점·이동 방식 선택도 요청했다. 답변 전 토론 가설만 작성했다.
+- 검증 예정: 문서 재독과 링크, 파일 존재 확인. 게임 구현·플레이테스트·push·PR은 수행하지 않았다.
+- 검증 완료: README·concept·task_plan 재독. 필수 문서 6개가 비어 있지 않고 로컬 링크 대상과 decisions 폴더가 존재함을 확인했다. AGENTS는 공백 기준 115단어로 800단어 제한 이내다. 확정 조건·제안·미해결 사항이 분리돼 있다.
+- 이번 회차 결과: 토론 초안 준비 완료. 기획 최종 합의와 Git 발행은 사용자 답변 후 재개한다. 게임 구현 및 재미 검증은 미수행.
+- 사용자 지정 저장소: https://github.com/gbrinan/backroomvania . 원격이 빈 저장소임을 gh repo view와 git ls-remote로 확인.
+- 프로젝트 폴더에 독립 Git 초기화. 샌드박스와 호스트의 소유자 차이로 Git 안전 경로 검사가 실패했다. 전역 설정 대신 해당 명령 환경에서만 정확한 프로젝트 경로를 신뢰하도록 지정해 해결.
+- 빈 main 기준 커밋 9b99ae9 생성 및 원격 push 성공. PR 비교를 위한 codex/game-planning 브랜치 생성.
+- staged diff 검사에서 템플릿 끝의 빈 줄을 발견해 정리했다.
+- 기획 커밋 5b00555 원격 push 성공. Draft PR #1 생성: https://github.com/gbrinan/backroomvania/pull/1 . main 병합은 수행하지 않았다.
+
+## 2026-09-12 — 시점 결정
+
+- 사용자의 성검전설 3식 탑다운 선택을 decisions/0001-top-down.md에 기록.
+- README와 콘셉트의 횡스크롤 제안을 교체하고 평면 탐험·방향별 스프라이트·벽 가림 검토 사항을 추가했다. 세부 이동·전투 규칙은 제안으로 유지했다.
+- 문서 재독과 링크 대상 확인, 오래된 시점 미정 문구 검색을 수행했다. 게임 코드 변경과 플레이 검증은 없다.
+
+## 2026-09-12 — 마계 런던과 이미지 세트
+
+- Higgsfield 설치를 요청했고 사용자 승인 후 balance·models_get·estimate_image_cost에 성공했다.
+- 영어 검색으로 박물관·영국 의회·런던시 자료를 확인하고 유물·시대 근거를 findings에 기록했다.
+- 기획 v0.2에서 주인공 후보, 빌리·살인마, 런던 명소, 네 문화 구역, 능력·귀환 연결, 상태·예외, 첫 실험을 작성했다.
+- 프롬프트 첫 저장 명령이 길어 JSONL here-document 종료 경고가 발생했다. 프롬프트를 4개씩 나눠 쓰고 manifest는 파일 참조로 줄여 복구했다.
+- 프롬프트 검증기가 라벨 없는 문장을 Format B로 판단해 조명 어휘 검사에 실패했다. 명시적 Format A의 Scene·Camera·Lighting 등으로 수정해 12개 전부 오류·경고 없이 통과했다.
+- Higgsfield GPT Image 2 / 1k / medium으로 12개 작업 제출. 12개 모두 completed. 전체를 하나의 갤러리로 표시했다.
+- 원본을 프로젝트 산출물로 보존하는 다운로드 명령이 시간 제한으로 종료됐으나 이후 12개 PNG의 존재·형식·크기를 확인했고 view_image로 모두 열었다.
+- 1차 화면 검토: 공통 밤색·황동·청록 팔레트와 네 구역의 구분 확인. 아시리아·일본 방의 추가 인간, 이집트 유물의 책 형태, 살인마 칼의 단검 형태를 발견해 4개 참조 이미지 수정 작업 제출.
+- 잔여 한계: 배경·인물의 픽셀 밀도와 등신은 장면마다 다르며 캐릭터 단독 시안은 대화용 전신 일러스트에 가깝다. 실제 방향별 스프라이트 규격·프레임·충돌은 아직 검증하지 않았다.
+- 국소 수정 4개 모두 completed 후 다시 열어 확인했다. 이집트 두루마리, 아시리아·일본의 단일 전경 주인공, 펼친 접이식 면도칼을 확인했다. 수정 전 job ID와 결과 URL도 생성 기록에 유지했다.
+- 최종 12장과 프롬프트 16개, manifest, 이미지별 Markdown 갤러리를 작성했다. 잔액은 1096.52에서 1080.52로 16크레딧 감소했다.
+- staged diff 검사에서 이미지 갤러리 끝의 여분 빈 줄을 발견해 제거했다.
+- 기획·이미지 커밋 df1b97c 원격 push와 Draft PR #1 제목·본문·head 확인 완료. 기획과 이미지 갤러리의 로컬 링크 대상을 확인했고 diff 공백 검사 통과. main 병합은 하지 않았다.
+
+## 다크 판타지 이미지 회차
+
+- 사용자 다크 판타지 요청을 결정 기록과 콘셉트에 반영.
+- Higgsfield GPT Image 2 / medium / 1k로 빅벤·이집트 전시실·면도날 살인마 3장 제출 성공. 기존 12장은 보존하며 새 시안을 별도 저장한다.
+
+### 다크 판타지 시안 검증
+
+- Higgsfield gpt_image_2, 1k, medium으로 3장 생성 성공. 작업 ID와 원본 URL은 images/dark-fantasy-records.json에 기록.
+- PNG 3장을 직접 열어 빅벤의 규모 대비, 이집트실 탑다운 구도와 아미트, 살인마의 성인 비율과 펼친 면도칼을 확인.
+- 프롬프트 3개 형식 검사 통과. 콘셉트 검증만 완료했으며 게임의 가독성·타일·애니메이션은 미검증.
+- 문서 갱신 시 Python 실행 환경이 작동하지 않아 Perl로 변경 후 파일 변경을 확인.
+
+## 분리 자산 회차
+
+- 사용자 답변으로 여성 기록복원사와 검·리볼버·유물 지팡이 확정.
+- Higgsfield 참조 생성으로 대화·컷신 시트 3장, 인물 없는 배경 3장, 이동·무기 스프라이트 원화 4장 생성.
+- 동시 작업 제한으로 걷기 제출 1회 거절. 먼저 제출된 작업 완료 후 재제출 성공.
+- 긴 셸 인수로 기록 저장 1회 실패. 짧은 배치로 나눠 복구.
+- 원본 PNG 10개 디코딩 검사 통과. 일부 view_image 대용량 전달 오류는 검토용 축소 JPEG로 우회해 시각 확인.
+- 캐릭터 시트의 전신·표정 구성, 배경에서 플레이 인물 제거, 걷기·지팡이의 4방향 배열 확인.
+- 검의 뒷면 누락, 리볼버의 몸과 총 방향 불일치 발견. 해당 두 시트 수정 생성 요청.
+- 수정본 2장을 직접 확인해 검의 뒷면과 리볼버 발사 방향 교정 확인. 손 바뀜·중심점·프레임 크기 차이는 남아 있어 후처리 대상으로 명시.
+- 분리 원화 10종(수정 이력 포함 12장), 프롬프트, 생성 기록, QA 문서를 저장. 실제 게임용 투명 아틀라스·재생 검증은 미완료이며 원화와 구별.
+
+## 지역 확장과 하스터 최종전 시각화
+
+- 사용자 확정 서사를 decisions/0005-hastur-finale.md에 기록하고 이전 수장고 단일 결말 제안을 교체.
+- Higgsfield gpt_image_2, 2k, high, 21:9로 3패널 보드 6장 생성 성공. 프롬프트와 작업 ID 저장.
+- 6개 PNG 실제 디코딩 확인. 대용량 뷰어 전달 오류는 축소 QA JPEG로 우회해 모두 직접 검토.
+- 한국 빛 퍼즐·남미 회피·아시아 지름길, 여섯 유물·동시 장비, 추리·추격·봉인 지속전, 고양이·왓슨·분리된 하스터의 흐름 확인.
+- 남은 시각 한계: 천부인 아이콘은 장면마다 다른 제안 도상. 추리 보드의 하단 소품 아이콘은 확정 6종 유물 목록과 다름. 진엔딩 마지막 패널에 홈즈처럼 보이는 추가 인물이 있어 실제 캐스트 배치 정본으로 사용하지 않음. 보드의 수치와 상세 UI는 미확정.
+- 실제 조작·난도·재시작 검증은 미실시. 이 회차는 플레이 흐름의 시각 기획이며 게임 구현이 아님.
+
+## 심장검 정체 수정
+
+- 사용자 정정을 결정·기획·플레이 규칙에 반영. 아즈텍과 남미 구역을 구별하고 기존 그림의 장검·남미 획득 장면을 수정 전 시안으로 표시.
+- 이미지 재생성은 이 회차에 수행하지 않음. 이전 프롬프트와 원본은 생성 이력으로 보존.
+
+## 일상 도입부 제작
+
+- 사용자 사건과 Trash/Rhast 철자를 결정 문서에 보존. 프롤로그 대사·조작·추격·실패 복구는 별도 제안으로 작성.
+- Higgsfield gpt_image_2, 2k, high, 21:9 보드 2장 생성 성공. 원본 PNG 디코딩과 QA JPEG 직접 확인.
+- 일상 정리, 관장의 모순된 질문, 거울 운반, 관장 사망 현장, 정확한 Rhast, 가면 쓴 추격자와 수레 우회 동선 확인.
+- 시각 한계: 보드의 거울 무늬는 약하게 표현됐고 일부 촛불이 꺼지는 중으로 남음. 사건 발견 패널의 거울은 모두 쓰러졌지만 일부 반사면이 위를 향함. 관장 대화 패널의 두 모습은 순차 대화 표현이며 인물이 둘이라는 뜻이 아님.
+- 실행 가능한 게임·실제 난도·탈출 입력 검증은 아직 하지 않았음. 새로운 잭 외형은 기존 이발사 캐릭터 시트의 후속 수정 대상.
+
+## 전체 스토리 통합
+
+- 확정 도입·6종 유물·아즈텍 정정·루팡과 3차전·고양이와 왓슨 진엔딩을 통합 원고로 연결.
+- Trash 생존, Rhast 우회 기록, 관장 기억 삭제, 거울 함정과 일반 엔딩은 승인 전 제안으로 명시.
+- 사건 인과·지역 구분·장비와 수집과 진엔딩 조건의 분리·이전 설정과의 충돌을 문서 재독으로 검토. 실행 게임이나 플레이 난도를 검증한 작업은 아님.
+
+## 전체 스토리 v2
+
+- 기존 기획·발견 기록·전체 원고를 대조하고 18장 본편+프롤로그로 재작성. 중반을 가장 긴 구간으로 구성.
+- 사용자 확인: HAster는 Hastur와 별개. 조종당한 흰 수집가 반전을 비밀 수장고까지 유보. 기존 중반 Trash 구출 제안은 교체.
+- 원래 능력과 구역의 이름, 이전 공간 재방문, 홈즈가 회수 작업을 이용하는 동기, 분리된 6종 수집·장비·진엔딩 조건을 검토.
+- 서사 검토만 수행. 플레이 시간·난도·퍼즐 구현 검증은 미실시. 새 연결 설정은 승인 전 제안으로 원고에 명시.
+
+## 백룸 통합
+
+- 전체 원고 v3에 직원 복도·빈 진열장·수직 고리·가짜 거점·배수실·상자 속 거리·인간 전시함·최종 복도 장면 통합.
+- 고정 지름길과 실제 거점은 유지. 랜덤 지도 초기화와 저장 기만은 제외. 유물 능력과 후반 추격에 공간 학습이 재사용되게 연결.
+- HAster/Hastur 구분과 6종 유물·최종 타격·고양이 진엔딩 조건 유지 확인. 문서와 인과 검토만 수행, 신규 이미지·실행 게임은 제작하지 않음.
+
+## 수면 거울 백룸 이미지
+
+- 사용자 요청: 물에 비치는 거울처럼 끝없이 이어지는 공간. 독립 배경 3종을 Higgsfield gpt_image_2 / 2k / high로 제출.
+- 낮은 시점 침수 복도, 반복 거울 수장고, 탑다운 배수실로 구성. 인물과 UI는 제외.
+- 생성 3건 성공. PNG 디코딩 및 축소 QA 이미지 직접 검토 완료: 침수 복도, 반복 거울 수장고, 높은 사선 시점 배수실의 무한 반사 확인. 인물·UI 없는 배경 콘셉트이며 실제 타일맵은 아님. 통행로와 가짜 반사의 구별은 게임 구현 때 검증 필요.
+
+## 게임 구현 (2026-09-13)
+- 외부 런타임 패키지 없이 Canvas/ES modules와 Node 정적 서버 구현. 일상 도입부터 19개 방, 6유물, 세 무기, 3차 홈즈 대결 및 두 엔딩 연결.
+- 최초 Playwright 실행은 브라우저 번들 미설치로 실패. 설치된 Edge 채널로 변경해 실제 브라우저 검증 성공.
+- 긴 셸 입력의 마지막 파일이 잘린 것을 즉시 확인하고 해당 파일 끝부분을 복구. Node 구문 검사와 테스트 통과.
+- 실제 키 입력: 유물 두 점 정리, 관장 대화, 지하 거울, 위층 복귀, Rhast, 수레·회피 동선, 잭 탈출, 열람실 도착 통과.
+- 19개 방은 저장 체크포인트 fixture로 각각 열어 캡처. 진엔딩은 보스 처치 완료 fixture에서 실제 이동·조사 입력으로 확인. 이 검증을 전체 캠페인 무보조 클리어로 해석하지 않는다.
+- 충돌 없는 모든 상호작용 위치 도달 가능성, 대각선 속도, 회피 무적, 무장 이전 공격 금지, 먹/하스터 무기 조건, 유물 획득 잠금, 사망 복귀, 저장 파싱, 수집가/추리/진엔딩 11개 테스트 통과.
+- 실제 Esc 회귀 테스트에서 일시정지 대화상자가 같은 키의 기본 cancel 동작으로 즉시 닫히는 오류 발견. keydown의 게임 중 Esc 기본 동작만 차단하도록 수정. 버튼 이벤트/애니메이션 타이밍/브라우저 기본 cancel 세 가설 중, 숨겨진 상태의 계속하기 버튼과 cancel 경로로 원인 확인. 동일 실제 입력 테스트로 재검증한다.
+- 추가 요청 반영: 잡몹 순찰·근접 감지, 잡몹을 남겨둔 출구 통과, 유물 수호자만 봉인 유지, 빌리의 운송 기록 3장 의뢰와 리볼버 개선, 유물 기반 지름길 3개.
+- 14개 게임 테스트 통과. 중국 회랑에서 공격 없이 기록 수집→살아 있는 잡몹을 남기고 열람실 이동→빌리 제출→보상 저장을 실제 키 입력으로 통과 (앞선 2장은 fixture).
+- Esc 수정 후 실제 일시정지/복귀 통과. 사망→재시작도 통과했으며 HUD 갱신 주기보다 빠른 테스트 읽기는 상태 기반 대기로 수정.
+- 시각 검토에서 지적한 한글 조사 줄 분리를 모든 뷰포트 keep-all로 수정. 모바일 타이틀에는 충분한 최소 높이를 적용했다.
+- 최종 재검증에서 실제 죽음/재시작 후 1번 심장적출검과 회피 입력으로 하스터 처치(bossDown 저장 확인), 제단으로 이동해 진엔딩 도달. `game/qa/ending-after-combat.png`에 캡처. 최종전 진입은 6유물 체크포인트 fixture였으며 무보조 전체 캠페인 완주와 구분한다.
+- 서버 공개 범위를 게임 폴더와 사용 중인 배경 QA 이미지 폴더로 제한하고 로컬 서버를 재시작했다. 최신 코드로 19개 방과 375/768/1280px 엔딩을 다시 캡처했다.
+
+## Gothic dark fantasy BGM
+- 독자 작곡 합성 악기 루프 2곡 생성: 탐험 60BPM/32초, 추격90BPM/21.33초. 원본 생성 스크립트와 WAV 저장. 외부 음원/샘플 없음.
+- 장면별 음악 선택, 페이드 전환, 기존 소리 버튼 연결. 실제 Edge AudioContext running/32초 탐험 버퍼/21.33초 추격 버퍼/음소거 source 종료를 검증. game/qa/music-report.json.
+- WAV 스테레오32kHz/16bit, PCM peak23000으로 클리핑 없음. 기존 게임 테스트14개 통과. 자동 재생 검증은 사람의 청취 취향 평가와 구분한다.
+
+## 인간형 스프라이트 개선
+- 에블린 원화의 단발·청록 코트·아이보리 블라우스·붉은 스카프를 기준으로 64px 안팎 인간형 렌더러 추가. 목, 어깨, 허리, 손, 무릎, 양쪽 부츠를 분리하고 정면/측면/후면과 팔·다리 교차 보행 구현.
+- 기록관장·루팡·빌리·흰 수집가·잭을 같은 인간형 골격과 개별 복장으로 교체. 몬스터는 기존 렌더링 유지.
+- 발 기준 좌표와 기존 충돌 반경은 유지. 이동 상태 표시는 애니메이션용 값으로만 추가. 실제 4방향 이동과3무기 입력,1200/375px 캡처,19개 방 재렌더 완료. 페이지 오류0,게임 테스트14개 통과.
+- 증거: game/qa/humans-lineup.png, humans-game.png, humans-mobile.png, humans-Key*.png, humans-report.json 및 갱신된 room-*.png.
+- 독립 기능 검토 PASS,시각 검토에서 인간 실루엣/정체성 제품 문제 없음. 왼쪽 무기 손 위치를 보정한 후 최신성 불일치가 지적되어19개 방 전체 재캡처 완료. 최종 독립 증거 감사 PASS: 소스16:02:53Z보다 모든 방 캡처16:03:00–08Z가 늦음,정상PNG,예외0. 관련 리뷰: human_sprite_integrity / human_sprite_visual / human_sprite_final.
+
+## 에블린 여성 얼굴 가독성
+- 에블린 전용 얼굴을 소폭 확대하고 타원형 턱선·보이는 이마와 뺨·분리된 눈썹/눈/속눈썹·절제된 입술색·얼굴을 감싸는 단발을 정면/측면/후면별로 구성. 다른 인간 NPC 얼굴과 체형·충돌·무기 로직은 변경하지 않음.
+- 실제 브라우저4방향 이동·3무기 입력 후 오류0. 확대 얼굴/실제 게임/375px 캡처 및19개 방 갱신. 새로운 로직 변경이 없어 별도 게임 단위 테스트 추가 없이 렌더 표면 검증에 집중.
+- 얼굴 미리보기: game/qa/evelyn-face-preview.png. 전체 인물: game/qa/humans-lineup.png.
+- 독립 시각/무결성 검토 모두 PASS. 얼굴 잘림·무기 겹침 없음, 에블린 전용 조건 확인. 375px에서는 얼굴 세부 표정보다 단발·얼굴색·목도리로 식별되는 한계가 있음.
+
+## Vercel production deployment
+- Live: https://backroomvania.vercel.app/game/ (2026-09-13). Project backroomvania, authenticated existing scope. GitHub repository connected by Vercel CLI.
+- Build copies only runtime HTML/CSS/modules, two music WAVs and title background into dist. Root redirects to /game/; documentation and QA are not published.
+- First CLI attempt needed explicit team scope; resolved using existing account project scope. First browser probe hit opening modal when clicking audio; fixed probe to dismiss dialogue through its button, without changing game code.
+- Public Edge browser: start, dismiss opening dialogue, movement input, sound enabled; page errors 0. Module/music/background 200; README and QA paths 404. Evidence: game/qa/vercel-report.json and vercel-game.png.
+- Browser saves belong to the deployment origin; localhost progress does not transfer automatically.
+
+## Higgsfield graphics integration (2026-09-13)
+- Generated and inspected materials.png, museum-wall.png, evelyn-portrait.png through Higgsfield MCP gpt_image_2. Original PNG assets embedded in game; provenance in game/art/provenance.json.
+- Four cached floor materials across 19 rooms, museum upper walls, carved regional cornices, glass exhibit cases, portrait dialogue, distinct creature silhouettes. Moved HP bars above new taller creatures so faces remain clear.
+- Validation: 14 game tests PASS; actual keyboard movement, 3 weapon inputs, sound toggle, portrait at 1280/768/375px, all 19 rooms captured. Browser errors 0; observed mean frame interval 16.62ms on desktop. This is frame sampling, not a Lighthouse audit or low-end mobile performance guarantee.
+- Production deployment https://backroomvania.vercel.app/game/ updated. Public browser verification errors0, materials200, provenance404; portrait loaded and sound enabled; frame sample mean16.39ms. Lighthouse package unavailable; no Lighthouse score claimed.
+- Integrity reviewer PASS: runtime layering, unchanged collision/input, portrait mobile layout and build inclusion confirmed. Reviewer inspected artifacts/source, not a separate playthrough. Common material grammar across regions remains a visual limitation.
+- Independent visual reviewer PASS, 24 PNGs directly inspected (19 rooms,3 portrait widths,opening,mobile play), no clipping/CJK blockers. Small fixed-ratio mobile characters remain an existing limitation. Integrity and visual reviews bind to current uncommitted graphics source used in deployment rfpu5ivdk; not claimed as whole-game final PR review.

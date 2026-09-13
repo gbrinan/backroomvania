@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-13T02:38:41.225Z",
+  "rooms": [
+    "office",
+    "basement",
+    "escape",
+    "hub",
+    "egypt",
+    "water",
+    "greek",
+    "assyria",
+    "china",
+    "india",
+    "japan",
+    "korea",
+    "andes",
+    "aztec",
+    "collector",
+    "deduction",
+    "bridge",
+    "clock",
+    "cathedral"
+  ],
+  "errors": [],
+  "source": "current files after Escape and CJK fixes"
+}

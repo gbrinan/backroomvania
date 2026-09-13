@@ -1,0 +1,9 @@
+const {chromium}=require('C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const fs=require('node:fs'),assert=require('node:assert/strict');
+(async()=>{const {freshFlags}=await import('../src/engine.mjs');const b=await chromium.launch({headless:true,channel:'msedge'});const p=await b.newPage({viewport:{width:1280,height:900}});await p.goto('http://127.0.0.1:4173/game/');
+await p.evaluate(s=>localStorage.setItem('backroomvania-v1',JSON.stringify(s)),{version:1,room:'china',flags:{...freshFlags(),armed:true,questActive:true,scrapA:true,scrapB:true,relics:['book','pottery','lamassu']}});await p.reload();await p.click('#continue');
+const move=async(k,t)=>{await p.keyboard.down(k);await p.waitForTimeout(t);await p.keyboard.up(k);};
+await move('KeyS',330);await move('KeyD',3700);await move('KeyW',270);await p.keyboard.press('KeyE');assert.equal(await p.locator('#dialog-title').textContent(),'운송 기록을 주웠다');await p.locator('#choices button').first().click();
+await move('KeyS',300);await move('KeyA',3900);await move('KeyW',300);await p.keyboard.press('KeyE');await p.waitForFunction(()=>document.getElementById('room-name').textContent==='봉인된 열람실');
+await move('KeyD',3200);await p.keyboard.press('KeyE');assert.equal(await p.locator('#dialog-title').textContent(),'세 장의 운송 기록');await p.screenshot({path:'game/qa/quest-complete.png',fullPage:true});await p.locator('#choices button').first().click();
+const save=await p.evaluate(()=>JSON.parse(localStorage.getItem('backroomvania-v1')));assert.equal(save.flags.questDone,true);assert.equal(save.flags.scrapC,true);fs.writeFileSync('game/qa/quest-report.json',JSON.stringify({noAttackInput:true,recordPickup:true,exitWithMobAlive:true,billyTurnIn:true,rewardPersisted:true},null,2));await b.close();})();
