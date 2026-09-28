@@ -1,0 +1,35 @@
+[
+  {
+    "index": 1,
+    "job_id": "314126ed-2db1-448d-9f35-e92c05e364ba",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35dlauCY6iwRnLl0hp8vXhIHqrK/hf_20260912_110550_314126ed-2db1-448d-9f35-e92c05e364ba.png",
+    "id": "01-drowned-corridor",
+    "resolution": "2k",
+    "quality": "high"
+  },
+  {
+    "index": 2,
+    "job_id": "6ad9d150-27c5-45df-bc35-6ef08501911a",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35dlauCY6iwRnLl0hp8vXhIHqrK/hf_20260912_110549_6ad9d150-27c5-45df-bc35-6ef08501911a.png",
+    "id": "02-mirror-depository",
+    "resolution": "2k",
+    "quality": "high"
+  },
+  {
+    "index": 3,
+    "job_id": "ef3928d3-59f5-4c4e-bb09-c153d0ec2a47",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35dlauCY6iwRnLl0hp8vXhIHqrK/hf_20260912_110549_ef3928d3-59f5-4c4e-bb09-c153d0ec2a47.png",
+    "id": "03-reflection-cistern",
+    "resolution": "2k",
+    "quality": "high"
+  }
+]

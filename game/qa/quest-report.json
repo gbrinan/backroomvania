@@ -1,0 +1,7 @@
+{
+  "noAttackInput": true,
+  "recordPickup": true,
+  "exitWithMobAlive": true,
+  "billyTurnIn": true,
+  "rewardPersisted": true
+}

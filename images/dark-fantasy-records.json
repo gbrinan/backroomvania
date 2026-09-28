@@ -1,0 +1,32 @@
+[
+  {
+    "index": 1,
+    "job_id": "0dd78627-e438-472b-8d46-071e4622ad4c",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35dlauCY6iwRnLl0hp8vXhIHqrK/hf_20260912_091534_0dd78627-e438-472b-8d46-071e4622ad4c.png",
+    "file": "13-dark-big-ben.png",
+    "prompt_file": "../prompts/13-dark-big-ben.txt"
+  },
+  {
+    "index": 2,
+    "job_id": "55ea8e5b-c52d-4f05-a51a-957d9aebf9ac",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35dlauCY6iwRnLl0hp8vXhIHqrK/hf_20260912_091535_55ea8e5b-c52d-4f05-a51a-957d9aebf9ac.png",
+    "file": "14-dark-egypt.png",
+    "prompt_file": "../prompts/14-dark-egypt.txt"
+  },
+  {
+    "index": 3,
+    "job_id": "1f3632be-73f2-4821-ae50-e3c88b148b6f",
+    "status": "completed",
+    "type": "image",
+    "model": "gpt_image_2",
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_35dlauCY6iwRnLl0hp8vXhIHqrK/hf_20260912_091534_1f3632be-73f2-4821-ae50-e3c88b148b6f.png",
+    "file": "15-dark-razor.png",
+    "prompt_file": "../prompts/15-dark-razor.txt"
+  }
+]

@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-13",
+  "provider": "Higgsfield MCP",
+  "jobs": [
+    {
+      "index": 1,
+      "job_id": "01de2661-68fd-48cd-9baa-a5c00f0681c0"
+    },
+    {
+      "index": 2,
+      "job_id": "a43ad938-7fb8-4932-8610-3cac79957600"
+    },
+    {
+      "index": 3,
+      "job_id": "ebf6c614-35d4-46b0-8752-78e7cfd53591"
+    }
+  ],
+  "requests": [
+    {
+      "index": 1,
+      "params": {
+        "model": "gpt_image_2",
+        "aspect_ratio": "1:1",
+        "prompt": "Production texture atlas for an original gothic dark fantasy top-down 2D action RPG set in a demon haunted Victorian British Museum. EXACT 2 by 2 equal square grid with NO gutters, NO text, NO labels, no frame. Each quadrant is an uninterrupted orthographic top-down flat floor material, NOT a room, NO objects, NO walls, NO perspective. Top left: aged walnut parquet small ornate geometric boards, warm umber. Top right: weathered green grey limestone flagstones with hairline cracks, restrained. Bottom left: ancient sandstone pavers with subtle worn geometric relief, muted ochre. Bottom right: faded mustard Victorian carpet with extremely subtle damask pattern, damp discolored edges. Sophisticated hand painted pixel art, visible crisp pixel clusters, classic 32-bit RPG environmental craft, deep colors with readable middle values, low contrast so characters read clearly. Texture fills every quadrant completely."
+      }
+    },
+    {
+      "index": 2,
+      "params": {
+        "model": "gpt_image_2",
+        "aspect_ratio": "3:2",
+        "prompt": "Original gothic dark fantasy 2D RPG environment illustration, continuous panoramic decorative backdrop for the upper wall of a top-down museum room. An ornate Victorian museum library wall with towering walnut bookcases, pilasters, brass sconces, arched midnight teal stained glass windows and carved gilded cornices. Front facing architectural elevation, symmetrical repeating bays. NO floor, NO foreground, NO people, NO UI, NO lettering. Entire image is architectural wall, suitable stretched as an upper wall strip behind live gameplay. Hand painted pixel art with crisp clusters, beautifully detailed 32-bit RPG style, warm amber candlelight against blue green shadows, rich but subdued, eerie dignified museum."
+      }
+    },
+    {
+      "index": 3,
+      "params": {
+        "model": "gpt_image_2",
+        "aspect_ratio": "1:1",
+        "prompt": "Character portrait for dialogue UI in an original gothic dark fantasy pixel art RPG. Evelyn Vale, adult female Victorian records conservator, expressive clearly feminine face with natural proportions, warm fair skin, intelligent green eyes, brown chin length asymmetrical bob, burgundy scarf, ivory blouse and dark teal tailored coat with brass buttons, brown satchel strap. Waist up three quarter portrait facing slightly right, face fully visible, poised determined thoughtful expression, holding an old small closed ledger at waist. Crisp sophisticated hand painted pixel art, 32-bit RPG portrait, carefully shaded face, beautiful readable eyes, no chibi, no photorealism. Solid dark blue green background with subtle warm rim light, NO text, NO logo, NO frame, no other characters. Face occupies upper central third of composition."
+      }
+    }
+  ],
+  "files": [
+    "materials.png",
+    "museum-wall.png",
+    "evelyn-portrait.png"
+  ]
+}

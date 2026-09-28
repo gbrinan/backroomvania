@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="에블린 베일의 발푸르기스의 밤. 대영박물관과 끝없는 백룸을 탐험하는 탑다운 다크 판타지 게임.">
+  <title>BACKROOMVANIA — 제13종의 밤</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b1012'/%3E%3Cpath d='M8 28V4h16v24M12 28V8h8v20' fill='none' stroke='%23d9b56d' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+  <header><a class="wordmark" href="./">BACKROOMVANIA <span>제13종의 밤</span></a><div class="header-actions"><button id="sound" aria-pressed="false">소리 켜기</button><button id="map-button">지도 M</button><button id="pause-button">일시정지 Esc</button></div></header>
+  <section id="stage" aria-label="게임 화면">
+    <canvas id="world" width="960" height="640" tabindex="0" aria-label="탑다운 게임. WASD 이동, E 조사, J 공격, Space 회피. 화면 아래에 현재 목표가 표시됩니다."></canvas>
+    <div id="title-screen" class="veil">
+      <div class="title-copy"><p class="eyebrow">LONDON · WALPURGIS NIGHT</p><h1>제13종의 밤</h1><p class="subtitle">BACKROOMVANIA</p><div class="hairline"></div><p>마지막 유물을 정리하면<br>집으로 돌아갈 수 있을 줄 알았다.</p><button id="start" class="primary">발푸르기스의 밤을 시작한다 <span>→</span></button><button id="continue" hidden>기록에서 계속하기</button><small>탑다운 액션 · 첫 플레이 버전<br>키보드 또는 화면 조작 · 진행 자동 저장</small></div>
+    </div>
+    <div id="hud" hidden><div><b id="room-name"></b><span id="chapter"></span></div><div class="vitals"><label>생명 <meter id="health" min="0" max="100" value="100"></meter></label><label>회피 <meter id="dash" min="0" max="1" value="1"></meter></label></div></div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <dialog id="dialog"><img class="dialog-portrait" src="art/evelyn-portrait.png" width="176" height="224" alt="에블린 베일" loading="lazy"><p id="speaker" class="eyebrow"></p><h2 id="dialog-title"></h2><p id="dialog-body"></p><div id="choices"></div></dialog>
+  </section>
+  <section id="game-bar" aria-label="게임 상태"><div class="mission"><span class="eyebrow">현재 기록</span><p id="objective">발푸르기스의 밤, 대영박물관 장서고.</p></div><div id="weapons" aria-label="무기 선택"><button data-weapon="0" disabled>1 <span>검</span></button><button data-weapon="1" disabled>2 <span>리볼버</span></button><button data-weapon="2" disabled>3 <span>유물 지팡이</span></button></div><button id="journal-button">유물 수첩 <span id="relic-count">0 / 6</span></button></section>
+  <footer><span>WASD / 방향키 이동 · E 조사 · J / 클릭 공격 · Space 회피 · 1–3 무기</span><span id="save-status">밤은 당신의 기록을 기억한다.</span></footer>
+  <section id="touch" aria-label="화면 조작"><div class="dpad"><button data-key="ArrowUp" aria-label="위로">↑</button><button data-key="ArrowLeft" aria-label="왼쪽으로">←</button><button data-key="ArrowDown" aria-label="아래로">↓</button><button data-key="ArrowRight" aria-label="오른쪽으로">→</button></div><div><button data-key="KeyE">조사 E</button><button data-key="KeyJ">공격 J</button><button data-key="Space">회피</button></div></section>
+</main>
+<script type="module" src="src/main.mjs"></script>
+</body></html>
